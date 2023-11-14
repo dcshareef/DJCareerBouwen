@@ -1,0 +1,490 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Custom Font */
+@font-face {
+    font-family: 'Gotham-Bold'; 
+    src: url('../font/Gotham-Bold.otf');
+}
+@font-face {
+    font-family: 'Gotham-lightItalic'; 
+    src: url('..font/GothamBookItalic');
+}
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../font/Gotham\ Medium.otf');
+}
+@font-face {
+    font-family: 'Aonic';
+    src: url('../font/AeonikTRIAL-Regular.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    list-style-type: none;
+}
+
+
+/* Hero-Section */
+section.hero-section {
+    padding: 10px 0px 0px;
+    min-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(rgba(29, 43, 58,0.7),rgba(29,43,58,0.7)),url('../images/background-img-22.jpg') 10% 30% / cover no-repeat;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+section.hero-section h5 {
+    padding: 0px 20px;
+}
+section.hero-section h2 {
+    font-size: 2.0rem;
+    font-family: 'Gotham-Medium';
+}
+section.hero-section h1 {
+    font-size: 110px;
+    font-family: 'Gotham-Bold'; 
+    position: relative;
+    left: 50px;
+}
+section.hero-section h1::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 27px;
+    width: 10px;
+    height: 82px;
+    background-color: #64a945;
+}
+section.hero-section .container {
+    padding: 150px 0px;
+}
+/* Hero-Section ends here */
+
+
+
+/* Courses-Section */
+section.courses-section {
+    height: 100%;
+    padding: 30px 0px 50px;
+    overflow: hidden;
+}
+section.courses-section .courses-head {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+section.courses-section .courses-head p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+}
+section.courses-section a {
+    text-decoration: none;
+    color: #000;
+}
+section.courses-section .course-Wrapper {
+    border: 1px solid #e1dddd;
+    border-radius: 10px 30px;
+    overflow: hidden;
+    width: 100%;
+    height: 460px;
+    max-width: 440px;
+    margin: 25px auto;
+    position: relative;
+}
+section.courses-section .course-description {
+    padding: 50px 20px 10px;
+    position: relative;
+    transition: 200ms;
+    height: 58%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.col-12:nth-child(odd):hover .course-description {
+    background-color: #f4e19b;
+}
+.col-12:nth-child(even):hover .course-description {
+    background-color: #ADD8E6;
+}
+section.courses-section .course-description h2 {
+    font-family: 'Aonic';
+}
+section.courses-section .course-description p {
+    color: #504f4f;
+    font-size: 1rem;
+    font-family: 'Aonic';
+    word-spacing: .1px;
+    letter-spacing: .5px;
+}
+.col-12:nth-child(odd) .course-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 9.5%;
+    width: 100%;
+    background-color: #f4e19b;
+    z-index: 0;
+    transition: 500ms;
+}
+.col-12:nth-child(even) .course-description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 9.5%;
+    width: 100%;
+    background-color: #ADD8E6;
+    z-index: 0;
+    transition: 500ms;
+}
+section.courses-section .image-Wrapper {
+    height: 42%;
+    overflow: hidden;
+}
+section.courses-section .image-Wrapper img {
+    transition: 400ms;
+}
+section.courses-section .course-Wrapper:hover .image-Wrapper img {
+    transform: scale(1.1);
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons img {
+    max-height: 40px;
+    position: relative;
+    bottom: 10px;
+    object-fit: cover;
+}
+section.courses-section button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    height: 40px;
+    width: 138px;
+    border: 1px solid #29544e;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    transition: 400ms;
+    border-radius: 5px;
+}
+section.courses-section button:hover {
+    background-color: #29544e;
+    color: #fff;
+}
+section.courses-section .icons h4 {
+    font-size: 24px;
+}
+/* Courses-section ends here */
+
+
+
+
+/* Register-Form */
+.formWrapper {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    font-family: 'Poppins', sans-serif;
+}
+.formContents {
+    background-color: #FFFFFF;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 20px 20px 0px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    /* overflow: hidden; */
+}
+.formWrapper .formContents{
+    padding: 20px 0px;
+}
+form {
+    height: 100%;
+}
+.formContents img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-position: 0%;
+    object-fit: cover;
+    max-height: 100%;
+}
+span.close {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -20px;
+    top: -20px;
+    background-color: #4e6656;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #fff;
+}
+form .formInputs {
+    padding: 20px 30px 0px;
+}
+form .formInputs input,
+form .formInputs select  {
+    width: 100%;
+    max-height: 40px;
+    padding: 0px 8px;
+}
+form .formInputs input,
+form .formInputs select {
+    height: 50px;
+    border: 0;
+    border-bottom: 1px solid grey;
+    outline: 0;
+    font-size: 16px;
+}
+form textarea{
+    border: 0;
+    border-bottom: 1px solid grey;
+    background-color: #fff;
+}
+form .formInputs input:focus,
+form .formInputs select:focus {
+    outline: 0;
+}
+form .inputBox {
+    margin: 13px 0px;
+    position: relative;
+}
+form .formInputs label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+form .inputBox small {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    color: red;
+    pointer-events: none;
+}
+
+form .formInputs input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+/* Remove spinners in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+form textarea{
+    padding: 0px 8px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    margin-top: 10px;
+    resize: none;
+}
+form textarea:focus{
+    outline: 0;
+}
+form button {
+    letter-spacing: 1px;
+    font-family: 'Gotham-Medium';
+    height: 40px;
+    width: 150px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    background-color: #29544e;
+    color: #fff;
+    margin-top: 10px;
+    transition: 400ms;
+    border-radius: 20px;
+}
+form button:hover {
+    background-color: #4e6656;
+}
+/* Register-Form ends */
+
+
+
+
+
+@media (max-width: 992px) {
+    /* Hero-Section */
+    section.hero-section {
+        background-position: 75% 15%;
+    }
+    section.hero-section h2 {
+        font-size: 2.0rem;
+        font-family: 'Gotham-Medium';
+    }
+    section.hero-section h1 {
+        font-size: 90px;
+        left: 50px;
+    }
+    section.hero-section h1::before {
+        left: -45px;
+        top: 23.5px;
+        width: 10px;
+        height: 66px;
+    }
+    section.hero-section .container {
+        padding: 150px 0px;
+    }
+
+    /* Reg-Form */
+    .formWrapper .formContents{
+        padding: 20px 0px;
+    }
+    form {
+        margin-top: -25px;
+        height: 100%;
+    }
+    span.close {
+        left: -15px;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 30px;
+    }
+    .formWrapper .formContents{
+        padding: 20px 0px;
+    }
+    form .formInputs {
+        padding: 20px 5px 0px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    /* Hero-Section */
+    section.hero-section {
+        min-height: 40vh;
+        background-position: 65% 15%;
+    }
+    section.hero-section h2 {
+        font-size: 1.8rem;
+        font-family: 'Gotham-Medium';
+    }
+    section.hero-section h1 {
+        font-size: 70px;
+        left: 50px;
+    }
+    section.hero-section h1::before {
+        left: -45px;
+        top: 16.8px;
+        width: 10px;
+        height: 52px;
+    }
+    section.hero-section .container {
+        padding: 150px 0px;
+    }
+
+    /* Courses-Section */
+    section.courses-section {
+        padding: 0px 0px 50px;
+    }
+
+    /* Popup Register-Form */
+    .formWrapper img {
+        display: none;
+    }
+
+    /* Footer */
+    footer .footer-wrapper {
+        padding: 50px 0px;
+    }
+    footer h3 {
+        line-height: 0.7;
+        margin: 25px 0px 20px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    /* Hero-Section */
+    section.hero-section {
+        min-height: 37vh;
+    }
+    section.hero-section h5 {
+        padding: 0px 10px;
+        font-size: 0.8rem;
+    }
+    section.hero-section h2 {
+        font-size: 1.2rem;
+        font-family: 'Gotham-Medium';
+    }
+    section.hero-section h1 {
+        font-size: 55px;
+        left: 40px;
+    }
+    section.hero-section h1::before {
+        left: -35px;
+        top: 14.9px;
+        width: 8px;
+        height: 39px;
+    }
+    section.hero-section .container {
+        padding: 40px 10px 0px;
+    }
+
+    /* Courses-Section */
+    section.courses-section .courses-head p {
+        font-size: 1rem;
+    }
+    section.courses-section .course-Wrapper {
+        margin: 15px auto;
+        width: 97%;
+    }
+
+    /* Register-Form */
+    form {
+        margin-top: -25px;
+        height: 100%;
+    }
+    form .formInputs input,
+    form .formInputs select  {
+        width: 100%;
+        height: 40px;
+        padding: 0px 05px;
+    }
+    form button {
+        letter-spacing: 0px;
+        height: 35px;
+        width: 125px;
+        font-size: 13px;
+    }
+    form .inputBox small {
+        bottom: 0px;
+        right: 0;
+        font-size: 10px;
+    }
+}

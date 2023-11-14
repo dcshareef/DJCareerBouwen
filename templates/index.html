@@ -1,0 +1,432 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}Career Bouwen{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <!-- Swiper-js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Scroll-Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+    <!-- Popup-Form -->
+    <div class="formWrapper container-fluid" id="popupForm">
+        <div class="formContents row">
+            <div class="col-12 col-md-5">
+                <form action="" name="popupRegForm" onsubmit="formValidate(event)">
+                    <span class="close" id="closePopupBtn">&times;</span>
+                    <div class="formInputs">
+                        <div class="inputBox">
+                            <label for="">Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" id="">
+                            <small id="nameError"></small>
+                        </div>
+                        <div class="inputBox">
+                            <label for="">Number</label>
+                            <input type="number" name="number" placeholder="+91 808 657 5215" id="">
+                            <small id="numberError"></small>
+                        </div>
+                        <div class="inputBox">
+                            <label for="course">Select Course:</label>
+                            <select id="course" name="course">
+                                <option value="">Select</option>
+                                <option value="python-fullstack">Python Full Stack</option>
+                                <option value="mern-stack">MERN Stack</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="data-analytics">Data Analytics</option>
+                                <option value="business-analytics">Business Analytics</option>
+                            </select>
+                            <div class="inputBox">
+                                <label for="" id="message-label">Your Message</label>
+                                <textarea name="message" id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit"><span>Enroll</span>&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-7">
+                <img src="{% static 'images/img-1.jpg' %}" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+<!-- Popup-Form ends here -->
+
+
+<!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Swiper -->
+        <div class="swiper myCarSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{% static 'images/background-img-17.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/background-img-19.jpg' %}" alt="">
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
+
+<!-- About-Us Section -->
+    <section class="aboutUs" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 leftContentWrapper">
+                    <h2 class="text-md-start">A Institute That Makes You 
+                        <br>
+                        <span>an Expert</span></h2>
+                    <p>Career Bouwen has garnered praise from millions because of its solid curriculum and highly efficient instructors. One-on-one attention helps students clear their doubts and become confident day by day. Our outstanding personalised career support consultation aided numerous students in landing their dream jobs quickly.</p>
+                    <h4>Enjoy an Excellent career with India’s One & Only Trusted Digital Skills Institute</h4>
+                    <a href="{% url 'about' %}">
+                        <button class="aboutBtn"><span>Know More</span></button>
+                    </a>
+                </div>
+                <div class="col-lg-6 mt-3 rightContentWrapper">
+                    <img src="{% static 'images/background-img-20.jpg' %}" alt="" class="img-fluid">
+                    <div class="rightText">
+                        <p>We ensure you learn the best, from the best through innovative methods and exceptional thought leadership. Learn from passionate instructors with expertise who believe in practical teaching methodologies. Explore our courses below…</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Clients-Section -->
+    <section class="clients">
+        <div class="slider">
+            <div class="slider-track">
+                <div class="slide-item">
+                    <img src="{% static 'images/Fila-logo.png' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/cyber-park.webp' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Adidas-logo.jpg' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Dell_Logo.webp' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Techno-park.webp' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Adidas-logo.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="slider-track">
+                <div class="slide-item">
+                    <img src="{% static 'images/Fila-logo.png' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/cyber-park.webp' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Adidas-logo.jpg' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Dell_Logo.webp' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Techno-park.webp' %}" alt="">
+                </div>
+                <div class="slide-item">
+                    <img src="{% static 'images/Adidas-logo.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Courses Section -->
+    <section class="courses-section" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+        <div class="container">
+            <div class="row">
+                <!-- Heading -->
+                <div class="courses-head">
+                    <h1>Featured Courses</h1>
+                    <p>Learn latest technologies from industrial experts</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="{% url 'python' %}">
+                            <div class="course-description">
+                                <h1>Python Fullstack</h1>
+                                <p>Python is a user-friendly and versatile programming language used in web development, data analysis, and automation, known for its simplicity and readability.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/python-1.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{% url 'python' %}">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-15.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>MERN Stack</h1>
+                                <p>MERN stack is a web development framework that combines MongoDB, Express, React, and Node.js for building dynamic web applications.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/MERN-logo.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-17.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-right" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Digital Marketing</h1>
+                                <p>Digital marketing leverages online channels to reach and engage with target audiences, making it a crucial strategy for promoting products and services in the digital age.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/marketing.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-10.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-left" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Business Analytics</h1>
+                                <p>Business Analytics: Harness the potential of data to optimize operations, make strategic decisions, and propel your business forward in the digital age</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/business-analytics.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-26.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-left" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Data Science</h1>
+                                <p>Data Science: Unearth insights from data, solve complex problems, and drive innovation through the power of analytics and machine learning.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/data-Science.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-8.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-left" data-aos-delay="200" data-aos-duration='1000'> 
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Data Analytics</h1>
+                                <p>Data Analytics: Transform data into actionable insights, make data-driven decisions, and gain a competitive edge in today's data-driven world.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/analytics.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-7.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Courses-Section ends here -->
+
+
+<!-- Certification Section -->
+    <section class="certification" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+        <div class="container">
+            <div class="mainText text-center">
+                <h1>Career Bouwen</h1>
+                <p>Learn technologies from the industrial experts</p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="{% static 'images/background-13.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title">Placement Assurance</h3>
+                          <p class="card-text">At Career Bouwen, we guarantee your journey from education to employment. Our industry-focused training, career guidance, and strong employer connections ensure your placement in the IT field. Your success is our priority, and we're here to support you every step of the way.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="card" style="width: 100%; height: 100%;">
+                        <img src="{% static 'images/background-14.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title">Certification Worth</h3>
+                          <p class="card-text">Elevate your career with our industry-recognized certifications. Our programs provide you with the knowledge and skills sought after by top employers, making you a valuable asset in the job market. Invest in your future with Career Bouwen and unlock the full worth of certification.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="card" style="width: 100%;height: 100%;">
+                        <img src="{% static 'images/background-15.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h3 class="card-title">Professional team of tutors</h3>
+                          <p class="card-text">Our institute boasts a team of seasoned tutors who are dedicated to your journey. They bring extensive industry knowledge and a love for teaching to the table, ensuring you acquire the expertise required for a prosperous IT career. Partner with us and learn from the best to reach your professional goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Insta-Feed Section -->
+    <section class="InstaFeed" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+        <div class="container">
+            <div class="header">
+                <h1>Social Media Snapshots</h1>
+                <p>Stay updated with our latest posts, stories, and behind-the-scenes moments</p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250" data-aos-duration='1000'>
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/Cyf9Bj3t_8M/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-height: 943px; overflow: hidden; background:#FFF;  border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/Cyf9Bj3t_8M/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/Cyf9Bj3t_8M/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Techolas, Software Training Institute. Kozhikode | Kochi (@techolastechnologies)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4"  data-aos="fade-up" data-aos-delay="400" data-aos-duration='1000'>
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/CttuWPZuPzx/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-height: 943px; overflow: hidden; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/CttuWPZuPzx/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/CttuWPZuPzx/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by theer sanam (@ente.ponadave)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4"  data-aos="fade-up" data-aos-delay="550" data-aos-duration='1000'>
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/CrxpIkeus27/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-height: 943px; overflow: hidden; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/CrxpIkeus27/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/CrxpIkeus27/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Techolas, Software Training Institute. Kozhikode | Kochi (@techolastechnologies)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Testimonials Section -->
+    <section id="testimonial" class="testimonials">
+        <div class="mainHeading">
+            <h1>Testimonials</h1>
+            <p>What students talk about us</p>
+        </div>
+        <div class="decorText">
+            <h1>TESTIMONIALS</h1>
+        </div>
+        <div class="container">
+            <div class="row testimonialsWrapper">
+                <div class="col-12 col-lg-6">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper" style="overflow: visible;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiperContainer">  
+                                <div class="title">
+                                    <div class="profileImageWrapper">
+                                        <img src="{% static 'images/testimonials-men-1.jpg' %}" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="ms-3 text-start text-wrap">
+                                        <h2>Andres Iniesta</h2>
+                                        <h6>Front-end Devoloper</h6>
+                                    </div>
+                                </div>
+                                <div class="description text-start">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sapiente deleniti reiciendis perferendis ullam quisquam officia magnam corporis eaque voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. In, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eum?</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiperContainer">
+                                <div class="title">
+                                    <div class="profileImageWrapper">
+                                        <img src="{% static 'images/men-3.jpg' %}" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="ms-3 text-start">
+                                        <h2>Dani Alves</h2>
+                                        <h6>Backend Devoloper</h6>
+                                    </div>
+                                </div>
+                                <div class="description text-start">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sapiente deleniti reiciendis perferendis ullam quisquam officia magnam corporis eaque voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. In, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eum?</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiperContainer">
+                                <div class="title">
+                                    <div class="profileImageWrapper">
+                                        <img src="{% static 'images/men-2.jpg' %}" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="ms-3 text-start">
+                                        <h2>Pep Guardiola</h2>
+                                        <h6>Data Scientist</h6>
+                                    </div>
+                                </div>
+                                <div class="description text-start">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sapiente deleniti reiciendis perferendis ullam quisquam officia magnam corporis eaque voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. In, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eum?</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiperContainer">
+                                <div class="title">
+                                    <div class="profileImageWrapper">
+                                        <img src="{% static 'images/men-3.jpg' %}" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="ms-3 text-start">
+                                        <h2>Lionel Messi</h2>
+                                        <h6>Fullstack Devoloper</h6>
+                                    </div>
+                                </div>
+                                <div class="description text-start">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sapiente deleniti reiciendis perferendis ullam quisquam officia magnam corporis eaque voluptatibus! lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. In, velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eum?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <button class="prevBtn button"><i class="bi bi-arrow-left"></i></button>
+                            <button class="nextBtn button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+{% block script %}
+    <!-- Js -->
+    <script src="{% static 'javascript/index.js' %}"></script>
+{% endblock script %}

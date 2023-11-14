@@ -1,0 +1,84 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}contact us{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/sign-up.css' %}">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Swiper-js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Scroll-Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+
+<!-- Register-Section -->
+    <section class="registerSection">
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-xl-7" data-aos="fade-right" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="left-section">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.8)), url('{% static 'images/img-2.jpg' %}') center / cover no-repeat;">
+                                    <div class="description">
+                                        <h3>Explore endless opportunities for growth and success in your career journey at Career Bouwen. Our institute is dedicated to providing top-notch education and fostering a dynamic learning environment.</h3>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide" style="background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.8)), url('{% static 'images/img-1.jpg' %}') center / cover no-repeat;;">
+                                    <div class="description">
+                                        <h3>Join an innovative learning hub where creativity meets education. Career Bouwen Institute is a place where ideas flourish, and students are encouraged to think beyond boundaries.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prev-btn">
+                                <h3><i class="bi bi-arrow-left"></i></h3>
+                            </div>
+                            <div class="next-btn">
+                                <h3><i class="bi bi-arrow-right"></i></i></h3>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 col-xl-5 mx-auto" data-aos="fade-right" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="registerWrapper">
+                        <h2>Career Bouwen</h2>
+                        <h1>Begin Your Educational Adventure</h1>
+                        <form action="" name="regForm" onsubmit="validateForm(event)">
+                            <div class="inputBox">
+                                <label for="">Name</label>
+                                <input type="text" name="name" placeholder="">
+                                <small id="nameError"></small>
+                            </div>
+                            <div class="inputBox">
+                                <label for="">Email</label>
+                                <input type="email" name="email" placeholder="">
+                                <small id="emailError"></small>
+                            </div>
+                            <div class="inputBox">
+                                <label for="">Password</label>
+                                <input type="password" name="password" placeholder="">
+                                <small id="passwordError"></small>
+                            </div>
+                            <div class="inputBox">
+                                <label for="">Confirm Password</label>
+                                <input type="password" name="password1" placeholder="">
+                                <small id="password1Error"></small>
+                            </div>
+                            <button type="submit">Register</button>
+                            <p>already have an account? <a href="{% url 'login' %}"> login</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Register-Section ends -->
+
+{% endblock content %}
+
+{% block script %}
+    <!-- Js -->
+    <script src="{% static 'javascript/sign_up.js' %}"></script>
+{% endblock script %}

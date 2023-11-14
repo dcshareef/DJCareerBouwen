@@ -1,0 +1,664 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Custom Font */
+@font-face {
+    font-family: 'Gotham-Bold'; 
+    src: url('Gotham-Bold.otf');
+}
+@font-face {
+    font-family: 'Gotham-lightItalic'; 
+    src: url('GothamBookItalic.ttf');
+}
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('Gotham\ Medium.otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+/* Register-Form */
+.formWrapper {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    font-family: 'Poppins', sans-serif;
+}
+.formContents {
+    background-color: #FFFFFF;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 20px 20px 0px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    /* overflow: hidden; */
+}
+.formWrapper .formContents{
+    padding: 20px 0px;
+}
+form {
+    height: 100%;
+}
+.formContents img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-position: 0%;
+    object-fit: cover;
+    max-height: 100%;
+}
+span.close {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -20px;
+    top: -20px;
+    background-color: #4e6656;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #fff;
+}
+form .formInputs {
+    padding: 20px 30px 0px;
+}
+form .formInputs input,
+form .formInputs select  {
+    width: 100%;
+    max-height: 40px;
+    padding: 0px 8px;
+}
+form .formInputs input,
+form .formInputs select {
+    height: 50px;
+    border: 0;
+    border-bottom: 1px solid grey;
+    outline: 0;
+    font-size: 16px;
+}
+form textarea{
+    border: 0;
+    border-bottom: 1px solid grey;
+    background-color: #fff;
+}
+form .formInputs input:focus,
+form .formInputs select:focus {
+    outline: 0;
+}
+form .inputBox {
+    margin: 13px 0px;
+    position: relative;
+}
+form .formInputs label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+form .inputBox small {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    color: red;
+    pointer-events: none;
+}
+
+form .formInputs input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+/* Remove spinners in Chrome, Safari, and Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+form textarea{
+    padding: 0px 8px;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    margin-top: 10px;
+    resize: none;
+}
+form textarea:focus{
+    outline: 0;
+}
+form button {
+    letter-spacing: 1px;
+    font-family: 'Gotham-Medium';
+    height: 40px;
+    width: 150px;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: 0;
+    background-color: #29544e;
+    color: #fff;
+    margin-top: 10px;
+    transition: 400ms;
+    border-radius: 20px;
+}
+form button:hover {
+    background-color: #4e6656;
+}
+/* Register-Form ends */
+
+
+
+
+/* Hero-Section */
+section.hero-section {
+    height: 100%;
+    width: 100%;
+    padding: 0px 0px 50px;
+    overflow: hidden;
+    background: #28341f;
+    color: #fff;
+}
+section.hero-section h5 {
+    font-family: 'Gotham-Medium';
+    padding: 0px 20px;
+}
+section.hero-section .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.hero-section h1 {
+    font-family: 'Gotham-Medium';
+}
+section.hero-section h1 span {
+    font-size: 28px;
+}
+section.hero-section p {
+    font-family: 'Gotham-Medium';
+    color: #c8c6c6;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    word-spacing: 0.5px;
+    margin: 20px 0px;
+}
+section.hero-section button {
+    width: 100%;
+    height: 55px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 0;
+    transition: 400ms;
+}
+section.hero-section button:hover {
+    background-color: #4e6656;
+    color: #ffffff;
+}
+section.hero-section img {
+    width: 100%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    padding: 40px;
+}
+/* Hero-Section ends here */
+
+
+
+
+/* Python-About Section*/
+section.about-python {
+    height: 100%;
+    padding: 50px 0px;
+}
+section.about-python p.paragraph {
+    font-family: 'Lato', sans-serif;    
+    color: #474747;
+    letter-spacing: .3px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+section.about-python h2 {
+    font-family: 'Gotham-Medium';
+}
+section.about-python button {
+    width: 100%;
+    height: 55px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 0;
+    background-color: #28341f;
+    border-radius: 2px;
+    color: #fff;
+    transition: 400ms;
+}
+section.about-python button:hover {
+    background-color: #4e6656;
+    color: #ffffff;
+}
+section.about-python .box {
+    border: 1px solid #b7b7b7;
+    padding: 20px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+section.about-python .box h3 {
+    font-family: 'Gotham-Medium';
+    position: relative;
+}
+section.about-python .box h3::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 32%;
+    background-color: #1d2b3a;
+    top: 52px;
+    left: 3px;
+}
+section.about-python .box p {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    word-spacing: 1px;
+}
+/* Python-About Section ends*/
+
+
+
+
+/* FAQ-Section */
+section.FAQ {
+    height: 100%;
+    padding: 40px 0px;
+}
+section.FAQ h1 {
+    font-family: 'Gotham-Medium';
+    margin-bottom: 15px;
+}
+section.FAQ .accordion-item {
+    margin: 20px 0px;
+}
+section.FAQ .accordion-button {
+    padding: 20px 20px;
+}
+section.FAQ .accordion-item span {
+    font-family: 'Gotham-Medium';
+    font-size: 1.2rem;
+}
+section.FAQ .accordion-item p {
+    font-family: 'Gotham-Medium';
+    color: #656565;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    word-spacing: 0.5px;
+}
+
+
+
+
+/* Testimonials-section */
+section.testimonials {
+    height: 100%;
+    padding: 200px 0px 100px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+section.testimonials>.mainHeading{
+    position: absolute;
+    top: 20px;
+    font-size: 2.7rem;
+    line-height: 1.16;
+    font-family: 'Poppins', sans-serif;
+    color: #252729;
+    text-align: center;
+}
+section.testimonials .decorText, .decorText h1 {
+    font-size: 13.5vw;
+    color: #f1eeee;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    left: 70px;
+    text-transform: lowercase;
+    font-family: 'Gotham-Medium', sans-serif;
+}
+section.testimonials h2, h6 {
+    font-family: 'Gotham-Medium', sans-serif;
+}
+section.testimonials h2 {
+    font-size: 2.1rem;
+}
+section.testimonials p {
+    font-family: 'Lato', sans-serif;
+    color: #656565;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+section.testimonials .testimonialsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+section.testimonials .swiperContainer {
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.16);
+    background-color: #fff;
+    padding: 25px;
+}
+section.testimonials .swiperContainer .title {
+    display: flex;
+    align-items: center;
+    height: 175px;
+}
+section.testimonials .swiperContainer .title .profileImageWrapper {
+    height: 220px;
+    width: 180px;
+    position: relative;
+}
+section.testimonials .swiperContainer .title .profileImageWrapper img {
+    height: 220px;
+    width: 180px;
+    position: absolute;
+    top: -50px;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+section.testimonials .testimonialsWrapper .buttons {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+section.testimonials .testimonialsWrapper button {
+    background-color: #4e6656;
+    color: #fff;
+    padding: 10px 30px 30px;
+    height: 45px;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: -23px;
+    z-index: 200;
+    transition: 400ms;
+}
+section.testimonials .testimonialsWrapper button:active {
+    background-color: #fff;
+    border: 1px solid #4e6656;
+    color: #000;
+}
+section.testimonials .testimonialsWrapper .prevBtn {
+    right: 80px;
+}
+/* Testimonials ends here */
+
+
+
+
+@media (max-width: 1024px) {
+    /* Testimonial-Section */
+    section.testimonials .decorText, .decorText h1 {
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 992px) {
+    /* Reg-Form */
+    .formWrapper .formContents{
+        padding: 20px 0px;
+    }
+    form {
+        margin-top: -25px;
+        height: 100%;
+    }
+    span.close {
+        left: -15px;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 30px;
+    }
+    .formWrapper .formContents{
+        padding: 20px 0px;
+    }
+    form .formInputs {
+        padding: 20px 5px 0px;
+    }
+
+    /* Hero-Section */
+    section.hero-section {
+        background: linear-gradient(rgba(39, 51, 31, 0.8),rgba(39, 51, 31, 1)), url('../images/python-logo-png-1.png') top / cover no-repeat;
+        background-attachment: fixed;
+    }
+    section.hero-section img {
+        display: none;
+    }
+    section.hero-section h5 {
+        font-size: 18px;
+    }
+    section.hero-section h1 {
+        font-family: 'Gotham-Medium';
+        font-size: 29px;
+    }
+    section.hero-section p {
+        font-size: 16px;
+        margin: 15px 0px;
+    }
+    section.hero-section button {
+        height: 50px;
+        font-size: 17px;
+    }
+    section.hero-section img {
+        width: 100%;
+        object-fit: cover;
+        border: 5px solid #fff;
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    /* About-Python Section */
+    section.about-python {
+        padding: 20px 0px;
+    }
+    section.about-python .bottom .box {
+        margin: 3px 0px 20px;
+        background: linear-gradient(rgba(39, 51, 31, 0.9), rgba(0,0,0,0.7)), url('../images/background-img-6.jpg') bottom / cover no-repeat;
+        background-attachment: fixed;
+        color: #ffffff;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Register-Form */
+    .formWrapper img {
+        display: none;
+    }
+
+    /* Hero-Section */
+    section.hero-section button {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    /* About Python Section */
+    section.about-python p.paragraph {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* Testimonial-Section */
+    section.testimonials {
+        padding: 145px 0px 50px;
+    }
+
+    /* Footer */
+    footer .footer-wrapper {
+        padding: 50px 0px;
+    }
+    footer h3 {
+        line-height: 0.7;
+        margin: 25px 0px 20px;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    /* Register-Form */
+    form {
+        margin-top: -25px;
+        height: 100%;
+    }
+    form .formInputs input,
+    form .formInputs select  {
+        width: 100%;
+        height: 40px;
+        padding: 0px 05px;
+    }
+    form button {
+        letter-spacing: 0px;
+        height: 35px;
+        width: 125px;
+        font-size: 13px;
+    }
+    form .inputBox small {
+        bottom: 0px;
+        right: 0;
+        font-size: 10px;
+    }
+
+    /* Hero-Section */
+    section.hero-section h5 {
+        font-size: 14px;
+    }
+    section.hero-section h1 {
+        font-size: 23px;
+    }
+    section.hero-section h1 span {
+        font-size: 18px;
+    }
+    section.hero-section p {
+        font-size: 14px;
+        margin: 10px 0px;
+    }
+    section.hero-section button {
+        height: 40px;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    section.hero-section img {
+        width: 100%;
+        object-fit: cover;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    /* About Python Section*/
+    section.about-python {
+        padding: 0px;
+        margin-top: -15px;
+    }
+    section.about-python p.paragraph {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    section.about-python h2 {
+        line-height: 1.2;
+        font-size: 1.8rem;
+        margin: 20px 0px 10px;
+    }
+    section.about-python button {
+        height: 40px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    section.about-python .bottom .box {
+        padding: 20px 25px;
+        margin: 3px 0px 20px;
+        border-radius: 10px;
+        color: #fff;
+    }
+    section.about-python .box p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    section.about-python .bottom .box h3::before {
+        top: 47px;
+    }
+
+    /* FAQ-Section */
+    section.FAQ {
+        padding: 0px 0px 40px;
+    }
+    section.FAQ h1 {
+        text-align: center;
+    }
+    section.FAQ .accordion-item {
+        margin: 0px 0px;
+    }
+    section.FAQ .accordion-button {
+        padding: 20px 20px;
+    }
+    section.FAQ .accordion-item span {
+        font-family: 'Gotham-Medium';
+        font-size: 1.1rem;
+    }
+    section.FAQ .accordion-item p {
+        font-family: 'Gotham-Medium';
+        color: #656565;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        word-spacing: 0.5px;
+    }
+
+    /* Testimonials-section */
+    section.testimonials h2 {
+        font-size: 1.8rem;
+    }
+    section.testimonials p {
+        font-size: 1rem;
+    }
+    section.testimonials .swiperContainer .title .profileImageWrapper {
+        height: 180px;
+        width: 200px;
+    }
+    section.testimonials .swiperContainer .title .profileImageWrapper img {
+        height: 180px;
+        width: 200px;
+        top: -30px;
+        object-position: 65% 0%;
+    }
+    section.testimonials .testimonialsWrapper .buttons {
+        display: none;
+    }
+}

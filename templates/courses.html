@@ -1,0 +1,207 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}courses{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Scroll-Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <hr>
+        <h5><a href="index.html" style="text-decoration: none; color: #fff;">Home</a> > <a href="" style="text-decoration: none; color: #fff;">Courses</a></h5>
+        <hr>
+        <div class="container">
+            <h2>CAREER BOUWEN</h2>
+            <h1>COURSES</h1>
+        </div>
+    </section>
+
+<!-- Courses Section -->
+    <section class="courses-section" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+        <div class="container">
+            <div class="row">
+                <!-- Heading -->
+                <div class="courses-head">
+                    <h1>Featured Courses</h1>
+                    <p>Learn latest technologies from industrial experts</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="{% url 'python' %}">
+                            <div class="course-description">
+                                <h1>Python Fullstack</h1>
+                                <p>Python is a user-friendly and versatile programming language used in web development, data analysis, and automation, known for its simplicity and readability.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/python-1.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="{% url 'python' %}">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-15.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>MERN Stack</h1>
+                                <p>MERN stack is a web development framework that combines MongoDB, Express, React, and Node.js for building dynamic web applications.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/MERN-logo.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-17.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Digital Marketing</h1>
+                                <p>Digital marketing leverages online channels to reach and engage with target audiences, making it a crucial strategy for promoting products and services in the digital age.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/marketing.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-10.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Business Analytics</h1>
+                                <p>Business Analytics: Harness the potential of data to optimize operations, make strategic decisions, and propel your business forward in the digital age</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/business-analytics.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-26.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'>
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Data Science</h1>
+                                <p>Data Science: Unearth insights from data, solve complex problems, and drive innovation through the power of analytics and machine learning.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/data-Science.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-8.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xxl-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration='1000'> 
+                    <div class="course-Wrapper">
+                        <a href="">
+                            <div class="course-description">
+                                <h1>Data Analytics</h1>
+                                <p>Data Analytics: Transform data into actionable insights, make data-driven decisions, and gain a competitive edge in today's data-driven world.</p>
+                                <div class="icons">
+                                    <h4><i class="bi bi-arrow-right"></i></h4>
+                                    <img src="{% static 'images/analytics.png' %}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="image-Wrapper">
+                                <img src="{% static 'images/background-img-7.jpg' %}" alt="" class="img-fluid" style="object-fit: cover;">
+                            </div>
+                        </a>
+                        <button onclick="registerNow()">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration-Form -->
+    <div class="formWrapper container-fluid" id="popupForm">
+        <div class="formContents row">
+            <div class="col-12 col-md-5">
+                <form action="" name="popupRegForm" onsubmit="formValidate(event)">
+                    <span class="close" id="closePopupBtn">&times;</span>
+                    <div class="formInputs">
+                        <div class="inputBox">
+                            <label for="">Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" id="">
+                            <small id="nameError"></small>
+                        </div>
+                        <div class="inputBox">
+                            <label for="">Number</label>
+                            <input type="number" name="number" placeholder="+91 808 657 5215" id="">
+                            <small id="numberError"></small>
+                        </div>
+                        <div class="inputBox">
+                            <label for="course">Select Course:</label>
+                            <select id="course" name="course">
+                                <option value="">Select</option>
+                                <option value="python-fullstack">Python Full Stack</option>
+                                <option value="mern-stack">MERN Stack</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="data-analytics">Data Analytics</option>
+                                <option value="business-analytics">Business Analytics</option>
+                            </select>
+                            <div class="inputBox">
+                                <label for="" id="message-label">Your Message</label>
+                                <textarea name="message" id="" cols="30" rows="5" placeholder="Enter your message"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit"><span>Enroll</span>&nbsp;&nbsp;<i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-7">
+                <img src="{% static 'images/img-1.jpg' %}" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+<!-- Registration-Form ends here -->
+
+<!-- Courses-Section ends here -->
+{% endblock content %}
+
+{% block script %}
+    <!-- Js -->
+    <script src="{% static 'javascript/courses.js' %}"></script>
+{% endblock script %}
