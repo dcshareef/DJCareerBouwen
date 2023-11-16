@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: 'Gotham-lightItalic'; 
-    src: url('..font/GothamBookItalic');
+    src: url('../font/GothamBookItalic.ttf');
 }
 @font-face {
     font-family: 'Gotham-Medium';
