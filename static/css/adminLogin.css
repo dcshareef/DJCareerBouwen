@@ -55,3 +55,11 @@ section.loginSection form button {
 section.loginSection form button:hover {
     background-color: #d6a533;
 }
+
+
+
+@media(max-width: 576px) {
+    section.loginSection form label {
+        font-size: 15px;
+    }
+}

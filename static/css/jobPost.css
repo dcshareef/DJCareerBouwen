@@ -70,9 +70,14 @@ section.JobPost form button:hover {
 
 
 
-
-/* tableSection starts */
-.tableSection {
-    height: 100vh;
-    padding: 50px 0px;
+@media(max-width: 576px) {
+    section.JobPost form label{
+        font-size: 15px;
+    }
+    section.JobPost form input[type='file'] {
+        font-size: 15px;
+    }
+    section.JobPost form select {
+        font-size: 15px;
+    }
 }

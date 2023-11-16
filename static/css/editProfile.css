@@ -104,6 +104,9 @@
         border-radius: 15px;
     }
     .editProfileSection form label {
-        font-size: 16px;
+        font-size: 15px;
+    }
+    .editProfileSection form input[type='file'] {
+        font-size: 15px;
     }
 }
