@@ -21,6 +21,8 @@ section.profileSection {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
+    overflow-x: hidden;
 }
 section.profileSection .personalDetails {
     background-color: #e9f5db;
