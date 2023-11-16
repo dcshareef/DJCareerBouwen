@@ -1,0 +1,57 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section.loginSection {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/room-1.jpg') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+section.loginSection form {
+    background-color: #ffffff;
+    padding: 40px 30px 50px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.2);
+}
+section.loginSection form h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+section.loginSection form .inputBox {
+    margin-bottom: 20px;
+}
+section.loginSection form label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+}
+section.loginSection form input {
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-bottom: 1px solid grey;
+    outline: 0;
+    font-size: 18px;
+}
+section.loginSection form button {
+    width: 100%;
+    height: 35px;
+    outline: 0;
+    border: 0;
+    margin-top: 20px;
+    background-color: #f0b736;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 400ms;
+}
+section.loginSection form button:hover {
+    background-color: #d6a533;
+}

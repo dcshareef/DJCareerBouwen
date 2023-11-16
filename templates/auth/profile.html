@@ -1,0 +1,76 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}contact us{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Scroll-Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+    <section class="profileSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-11 mx-auto col-lg-5" data-aos="fade-right" data-aos-delay="300" data-aos-duration='1000'>
+                    <div class="personalDetails">
+                        <div class="imageWrapper">
+                            <img src="{% static 'images/men-4.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="info">
+                            <h2>Shareef Mh'd</h2>
+                            <div class="phone">
+                                <p><i class="bi bi-telephone-inbound"></i> &nbsp;+91 8086575215</p>
+                                <p><i class="bi bi-whatsapp"></i>&nbsp; +91 8086575215</p>
+                            </div>
+                            <p>dcshareeef@gmail.com</p>
+                            <div class="address">
+                                <div class="currentAddress">
+                                    <h5>Current Address</h5>
+                                    <p>123 Main Street,
+                                        Cityville, State 12345,
+                                        India
+                                    </p>
+                                </div>
+                                <div class="permanentAddress">
+                                    <h5>Permanent Address</h5>
+                                    <p>123 Main Street,
+                                        Cityville, State 12345,
+                                        India
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-11 mx-auto col-lg-7" data-aos="fade-left" data-aos-delay="300" data-aos-duration='1000'>
+                    <div class="professionalDetails">
+                        <div class="education box">
+                            <h4>Education</h4>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Bachelor of Science in Computer Science</p>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Certification in Web Development</p>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Diploma in Graphic Design</p>
+                        </div>
+                        <div class="skills box">
+                            <h4>Skills</h4>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Web Development: HTML, CSS, React</p>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Database Management: MySQL, MongoDB</p>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Version Control: Git</p>
+                        </div>
+                        <div class="experience box">
+                            <h4>Experience</h4>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;UX/UI Designer | Creative Designs Studio</p>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Software Engineer | XYZ Tech Solutions</p>
+                        </div>
+                        <div class="certifications box">
+                            <h4>Certifications</h4>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;AWS Certified Solutions Architect – Associate</p>
+                            <p><i class="bi bi-check-circle"></i>&nbsp;Google Analytics Individual Qualification (GAIQ)</p>
+                        </div>
+                        <a href="{% url 'editProfile' %}">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

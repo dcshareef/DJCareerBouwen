@@ -21,3 +21,18 @@ def login(request):
 
 def python(request):
     return render(request, 'courses/python.html')
+
+def profile(request):
+    return render(request, 'auth/profile.html')
+
+def editProfile(request):
+    return render(request, 'auth/editProfile.html')
+
+def admin(request):
+    return render(request, 'admin/adminLogin.html')
+
+def jobPost(request):
+    return render(request, 'admin/jobPost.html')
+
+def usersList(request):
+    return render(request, 'admin/usersList.html')

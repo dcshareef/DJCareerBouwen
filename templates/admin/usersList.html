@@ -1,0 +1,71 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}contact us{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/usersList.css' %}">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Scroll-Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock head %}
+{% block content %}
+    <section class="usersList">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-12 col-md-10 mx-auto">
+                    <h2 data-aos="fade-right" data-aos-delay="300" data-aos-duration='1000'>User Management</h2>
+                    <table data-aos="fade-left" data-aos-delay="300" data-aos-duration='1000'>
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Shareef</td>
+                            <td>dcshareeef@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>John</td>
+                            <td>john@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Amal</td>
+                            <td>amal@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Smith</td>
+                            <td>smith@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Arun</td>
+                            <td>arun@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Maxwell</td>
+                            <td>maxwell@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Suarez</td>
+                            <td>suarez@gmail.com</td>
+                            <td>Active <i class="bi bi-check2-all"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

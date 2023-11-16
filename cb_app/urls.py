@@ -9,4 +9,9 @@ urlpatterns = [
     path('sign_up', views.sign_up, name='sign_up'),
     path('login', views.login, name='login'),
     path('python', views.python, name='python'),
+    path('profile', views.profile, name='profile'),
+    path('editProfile', views.editProfile, name='editProfile'),
+    path('admin_login', views.admin, name='admin'),
+    path('job_post', views.jobPost, name='jobPost'),
+    path('users_list', views.usersList, name='usersList'),
 ]

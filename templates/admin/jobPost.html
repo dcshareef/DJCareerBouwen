@@ -1,0 +1,78 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}contact us{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/jobPost.css' %}">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Scroll-Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+    <section class="JobPost">
+        <div class="container">
+            <form action="" data-aos="fade-right" data-aos-delay="300" data-aos-duration='1000'>
+                <div class="row">
+                    <h2>Job Listings Administration</h2>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">Job Title</label>
+                            <input type="text" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Company Name</label>
+                            <input type="text" name="companyName">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Location</label>
+                            <input type="text" name="location">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Full-time or Part-time</label>
+                            <select name="" id="">
+                                <option value="">Full-time</option>
+                                <option value="">Part-time</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Description</label>
+                            <input type="text" name="description">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Benefits</label>
+                            <input type="text" name="benefits">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="">Experience Required</label>
+                            <input type="text" name="experience">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Skills Required</label>
+                            <input type="text" name="skills">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Starting Salary</label>
+                            <input type="number" name="stSalary">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ending Salary</label>
+                            <input type="number" name="edSalary">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Languages</label>
+                            <input type="text" name="languages">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Resume</label>
+                            <input type="file" name="languages">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock content %}

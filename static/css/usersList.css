@@ -1,0 +1,85 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section.usersList {
+    height: 100%;
+    min-height: 100vh;
+    padding: 60px 0px;
+    background-color: #c19838;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+section.usersList table {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.2);
+}
+section.usersList h2 {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+section.usersList table th, td {
+    text-wrap: wrap;
+    padding-left: 20px;
+}
+section.usersList table th{
+    font-size: 18px;
+    border-bottom: 1px solid #c3c3c3;
+}
+section.usersList table tr {
+    height: 60px;
+}
+section.usersList table td:nth-child(2) {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+section.usersList table td:nth-child(3) {
+    word-break: break-all;
+}
+section.usersList i {
+    color: #2dc32d;
+}
+
+
+@media(max-width: 1024px) {
+    section.usersList table th{
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    section.usersList table td {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+}
+@media(max-width: 576px) {
+    section.usersList {
+        padding: 30px 0px;
+    }
+    section.usersList table th, td {
+        padding-left: 0px;
+    }
+    section.usersList table {
+        width: 100%;
+    }
+    section.usersList table th{
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    section.usersList table td {
+        font-size: 11px;
+        padding-left: 10px;
+    }
+}
